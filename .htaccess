@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+
+	RewriteEngine On
+	RewriteRule ^meta/(.*?)/random.(htm|xhtml|meta|html|txt|diz)?(.*?) random.php?op=meta&folder=$1&$3
+	RewriteRule ^meta/(.*?)/random.(htm|xhtml|meta|html|txt|diz) random.php?op=meta&folder=$1
+	RewriteRule ^java/(.*?)/random.(json)?(.*?) random.php?op=json&folder=$1&$3
+	RewriteRule ^java/(.*?)/random.(json) random.php?op=json&folder=$1
+	RewriteRule ^path/(.*?)/random.(htm|xhtml|meta|html|txt|diz)?(.*?) random.php?op=path&folder=$1&$3
+	RewriteRule ^path/(.*?)/random.(htm|xhtml|meta|html|txt|diz) random.php?op=path&folder=$1&folder=$2
+
+</IfModule>
